@@ -1,0 +1,1 @@
+In their search for new disease-fighting medicines, drug makers have long employed a laborious trial-and-error process to identify the right compounds. But what if artificial intelligence could predict the makeup of a new drug molecule the way Google figures out what you’re searching for, or email programs anticipate your replies—like “Got it, thanks”?

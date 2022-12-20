@@ -1,0 +1,4 @@
+# Compilation output
+text-processing
+*.hi
+*.o
