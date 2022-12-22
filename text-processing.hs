@@ -10,11 +10,14 @@ cleanWords text =
         ws' = map (takeWhile isLetter . dropWhile (not . isLetter)) ws
         cleanedWords = filter (not . null) ws'
 
+countUnique :: [String] -> Int
+countUnique wordList =
+    length $ map head $ group $ sort wordList
+
 main =  do
-    str' <- putStrLn <$> cleanedWords
-    str'
+    print =<< uniqueWords
     where
         text = readFile "inputs/wsj-sample.txt"
-        splitText = cleanWords <$> text
-        cleanedWords = unwords <$> splitText
+        cleanedWords = cleanWords <$> text
+        uniqueWords = countUnique <$> cleanedWords
 
