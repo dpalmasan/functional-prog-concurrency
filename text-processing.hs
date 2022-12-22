@@ -6,13 +6,15 @@ cleanWords :: String -> [String]
 cleanWords text =
     cleanedWords
     where
-        ws =  words $ map toLower text
-        ws' = map (takeWhile isLetter . dropWhile (not . isLetter)) ws
+        ws =  words . map toLower $ text
+        notLetter = not . isLetter
+        keepLetters = takeWhile isLetter . dropWhile notLetter
+        ws' = map keepLetters ws
         cleanedWords = filter (not . null) ws'
 
 countUnique :: [String] -> Int
 countUnique wordList =
-    length $ map head $ group $ sort wordList
+    length . map head . group . sort $ wordList
 
 main =  do
     print =<< uniqueWords
