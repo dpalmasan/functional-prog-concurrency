@@ -2,3 +2,6 @@
 text-processing
 *.hi
 *.o
+CHANGELOG.md.save*
+functional-prog-haskell.cabal.save*
+dist*
