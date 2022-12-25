@@ -5,3 +5,4 @@ text-processing
 CHANGELOG.md.save*
 functional-prog-haskell.cabal.save*
 dist*
+nocommit/*
